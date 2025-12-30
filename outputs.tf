@@ -1,3 +1,4 @@
+# network.tf
 output "vpc_id" {
   value       = aws_vpc.vpc_main.id
   description = "ID of the main VPC"
@@ -18,4 +19,9 @@ output "private_subnet_ids" {
     aws_subnet.subnet_private_db_b.id
   ]
   description = "IDs of all private subnets (web, app, db)"
+}
+
+# compute.tf
+output "ec2_bastion_public_ip" {
+  value = aws_instance.ec2_bastion_a.public_ip
 }

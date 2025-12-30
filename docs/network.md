@@ -1,4 +1,4 @@
-# Terraform Network Module Documentation
+# Network Module Documentation
 
 ## Overview
 This document covers the **network layer** of the 3-tier infra project.  

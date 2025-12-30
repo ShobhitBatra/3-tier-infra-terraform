@@ -21,21 +21,36 @@ variable "availability_zones" {
 }
 
 # compute.tf
-variable "" {
-  
+variable "instance_type" {
+  type = string
+  description = "EC2 instance size used by web,app and db tier"
+  default = "t2.micro"
 }
 
-variable "" {
-  
+variable "ami_bastion" {
+  type = string
+  description = "ami id for bastion host ec2 instance"
 }
 
-variable "" {
-  
+variable "ami_web" {
+  type = string
+  description = "ami id for web tier instances - custom ami using packer"
 }
 
-variable "" {
-  
+variable "ami_app" {
+  type = string
+  description = "ami id for app tier instances - custom ami using packer"
 }
+
+variable "ami_db" {
+  type = string
+  description = "ami id for db tier instances - custom ami using packer"
+}
+
+variable "ami_ids_map" {
+  type = map(string)
+}
+
 
 variable "" {
   
