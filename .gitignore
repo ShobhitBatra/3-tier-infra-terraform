@@ -1,0 +1,7 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+to-ask.md
+notes.md
+README.md
