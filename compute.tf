@@ -2,11 +2,11 @@
 
 # az-a
 resource "aws_instance" "ec2_web_a" {
-  ami                    = var.ami_web
-  instance_type          = var.instance_type
-  key_name               = aws_key_pair.key_private.key_name
-  vpc_security_group_ids = [aws_security_group.sg_web.id]
-  subnet_id = aws_subnet.subnet_private_web_a.id 
+  ami                         = data.aws_ami.ami_web.id
+  instance_type               = var.instance_type
+  key_name                    = aws_key_pair.key_private.key_name
+  vpc_security_group_ids      = [aws_security_group.sg_web.id]
+  subnet_id                   = aws_subnet.subnet_private_web_a.id
   associate_public_ip_address = false
   tags = {
     Name = "ec2-web-a"
@@ -15,11 +15,11 @@ resource "aws_instance" "ec2_web_a" {
 
 # az-b
 resource "aws_instance" "ec2_web_b" {
-  ami                    = var.ami_web
-  instance_type          = var.instance_type
-  key_name               = aws_key_pair.key_private.key_name
-  vpc_security_group_ids = [aws_security_group.sg_web.id]
-  subnet_id = aws_subnet.subnet_private_web_b.id 
+  ami                         = data.aws_ami.ami_web.id
+  instance_type               = var.instance_type
+  key_name                    = aws_key_pair.key_private.key_name
+  vpc_security_group_ids      = [aws_security_group.sg_web.id]
+  subnet_id                   = aws_subnet.subnet_private_web_b.id
   associate_public_ip_address = false
   tags = {
     Name = "ec2-web-b"
@@ -31,11 +31,11 @@ resource "aws_instance" "ec2_web_b" {
 
 # az-a
 resource "aws_instance" "ec2_app_a" {
-  ami                    = var.ami_app
-  instance_type          = var.instance_type
-  key_name               = aws_key_pair.key_private.key_name
-  vpc_security_group_ids = [aws_security_group.sg_app.id]
-  subnet_id = aws_subnet.subnet_private_app_a.id
+  ami                         = data.aws_ami.ami_app.id
+  instance_type               = var.instance_type
+  key_name                    = aws_key_pair.key_private.key_name
+  vpc_security_group_ids      = [aws_security_group.sg_app.id]
+  subnet_id                   = aws_subnet.subnet_private_app_a.id
   associate_public_ip_address = false
   tags = {
     Name = "ec2-app-a"
@@ -44,11 +44,11 @@ resource "aws_instance" "ec2_app_a" {
 
 # az-b
 resource "aws_instance" "ec2_app_b" {
-  ami                    = var.ami_app
-  instance_type          = var.instance_type
-  key_name               = aws_key_pair.key_private.key_name
-  vpc_security_group_ids = [aws_security_group.sg_app.id]
-  subnet_id = aws_subnet.subnet_private_app_b.id
+  ami                         = data.aws_ami.ami_app.id
+  instance_type               = var.instance_type
+  key_name                    = aws_key_pair.key_private.key_name
+  vpc_security_group_ids      = [aws_security_group.sg_app.id]
+  subnet_id                   = aws_subnet.subnet_private_app_b.id
   associate_public_ip_address = false
   tags = {
     Name = "ec2-app-b"
@@ -60,11 +60,11 @@ resource "aws_instance" "ec2_app_b" {
 
 # az-a
 resource "aws_instance" "ec2_db_a" {
-  ami                    = var.ami_db
-  instance_type          = var.instance_type
-  key_name               = aws_key_pair.key_private.key_name
-  vpc_security_group_ids = [aws_security_group.sg_db.id]
-  subnet_id = aws_subnet.subnet_private_db_a.id
+  ami                         = data.aws_ami.ami_db.id
+  instance_type               = var.instance_type
+  key_name                    = aws_key_pair.key_private.key_name
+  vpc_security_group_ids      = [aws_security_group.sg_db.id]
+  subnet_id                   = aws_subnet.subnet_private_db_a.id
   associate_public_ip_address = false
   tags = {
     Name = "ec2-db-a"
@@ -73,11 +73,11 @@ resource "aws_instance" "ec2_db_a" {
 
 # az-b
 resource "aws_instance" "ec2_db_b" {
-  ami                    = var.ami_db
-  instance_type          = var.instance_type
-  key_name               = aws_key_pair.key_private.key_name
-  vpc_security_group_ids = [aws_security_group.sg_db.id]
-  subnet_id = aws_subnet.subnet_private_db_b.id
+  ami                         = data.aws_ami.ami_db.id
+  instance_type               = var.instance_type
+  key_name                    = aws_key_pair.key_private.key_name
+  vpc_security_group_ids      = [aws_security_group.sg_db.id]
+  subnet_id                   = aws_subnet.subnet_private_db_b.id
   associate_public_ip_address = false
   tags = {
     Name = "ec2-db-b"
